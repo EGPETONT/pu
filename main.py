@@ -5,34 +5,6 @@ import os
 import platform
 from tabulate import tabulate
 
-class SystemInfo:
-    def __init__(self):
-        self.system = platform.system()
-        self.node = platform.node()
-        self.release = platform.release()
-        self.version = platform.version()
-        self.machine = platform.machine()
-        self.processor = platform.processor()
-        self.cpu_count = os.cpu_count()
-
-class SystemInfoPrinter:
-    def __init__(self, system_info):
-        self.system_info = system_info
-
-    def print_info(self):
-        # Создаем список с информацией о системе
-        table_data = [
-            ["System", self.system_info.system],
-            ["Node", self.system_info.node],
-            ["Release", self.system_info.release],
-            ["Version", self.system_info.version],
-            ["Machine", self.system_info.machine],
-            ["Processor", self.system_info.processor],
-            ["CPU Count", self.system_info.cpu_count]
-        ]
-
-        # Выводим информацию в виде таблицы
-        print(tabulate(table_data, headers=["Property", "Value"], tablefmt="grid"))
 
 
 
