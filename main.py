@@ -7,7 +7,6 @@ from tabulate import tabulate
 
 
 
-
 class SocketInfo:
     def __init__(self):
         self.sockets = self._get_socket_info()
